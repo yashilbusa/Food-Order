@@ -30,19 +30,6 @@ async function mongoDB() {
     try {
         await mongoose.connect('mongodb+srv://yashilbusa:Yy145214863@cluster0.ofcw2nr.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0',)
         console.log('Connected to MongoDB');
-        
-        const foodCollection = await mongoose.connection.db.collection("fooditems");
-        foodCollection.find({}).toArray(async function (err, data) {
-            if(err) console.log(err);
-            else console.log(data);
-        })
-
-        const categoryCollection = await mongoose.connection.db.collection("foodcategory");
-        categoryCollection.find({}).toArray(async function (err, data) {
-            if(err) console.log(err);
-            else console.log(data);
-        })
-
     } catch (error) {
         console.error('Error connecting to MongoDB:', error.message);
     }
