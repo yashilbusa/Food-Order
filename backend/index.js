@@ -13,7 +13,6 @@ app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
 
-
 // global.foodData = require('./db')(function call(err, data, CatData) {
 //     // console.log(data)
 //     if(err) console.log(err);
